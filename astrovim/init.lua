@@ -72,4 +72,5 @@ return {
   polish = function()
     vim.cmd.set('cc=80')
   end,
+
 }
