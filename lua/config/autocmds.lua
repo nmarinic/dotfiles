@@ -9,23 +9,13 @@
 ---
 -- Set colorcolumn based on file type
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
+  pattern = { "python", "go" },
   callback = function()
-    vim.opt_local.colorcolumn = "80"
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "go",
-  callback = function()
-    vim.opt_local.colorcolumn = "100"
-  end,
-})
-
--- Disable auto-format on save for Python files
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
-  callback = function()
-    vim.b.autoformat = false
+    if vim.bo.filetype == "python" then
+      vim.opt_local.colorcolumn = "80"
+      vim.b.autoformat = false
+    elseif vim.bo.filetype == "go" then
+      vim.opt_local.colorcolumn = "100"
+    end
   end,
 })

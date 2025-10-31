@@ -15,9 +15,35 @@ return {
             "-",
           },
         },
+        golines = {
+          prepend_args = { "--max-len=100" },
+        },
       },
       formatters_by_ft = {
         python = { "ruff_organize_imports", "ruff_format" },
+        go = { "gofumpt", "golines" },
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gopls = {
+          settings = {
+            gopls = {
+              hints = {
+                assignVariableTypes = false,
+                compositeLiteralFields = false,
+                compositeLiteralTypes = false,
+                constantValues = false,
+                functionTypeParameters = false,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+            },
+          },
+        },
       },
     },
   },

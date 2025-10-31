@@ -9,4 +9,6 @@ return {
       colorscheme = "gruvbox",
     },
   },
+  -- add e-ink
+  { "e-ink-colorscheme/e-ink.nvim" },
 }
