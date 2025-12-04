@@ -6,15 +6,13 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "thorn",
+      colorscheme = "everforest",
     },
   },
-  -- add e-ink
   { "e-ink-colorscheme/e-ink.nvim" },
-  -- add seoul256
   { "junegunn/seoul256.vim" },
-  -- add gruvbox-material
   { "sainnhe/gruvbox-material" },
-  -- add thorn
-  { "jpwol/thorn.nvim" },
+  { "sainnhe/everforest" },
+  { "rose-pine/neovim" },
+  { "scottmckendry/cyberdream.nvim" },
 }
